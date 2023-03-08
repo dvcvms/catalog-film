@@ -1,4 +1,4 @@
-package catalogfilm.model;
+package ru.mts.catalogfilm.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -8,7 +8,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Director {
+public class DirectorEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID uuid;
@@ -17,7 +17,7 @@ public class Director {
     private Integer age;
     private String country;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Film> filmList;
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<FilmEntity> filmList;
 
 }

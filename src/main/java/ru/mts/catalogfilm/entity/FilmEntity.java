@@ -1,17 +1,17 @@
-package catalogfilm.model;
+package ru.mts.catalogfilm.entity;
 
-import catalogfilm.constans.GenreEnum;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import ru.mts.catalogfilm.constans.GenreEnum;
 
 import java.util.UUID;
 
 @Data
 @Entity
-public class Film {
+public class FilmEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID uuid;
