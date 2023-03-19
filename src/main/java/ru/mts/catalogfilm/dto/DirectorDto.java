@@ -1,7 +1,6 @@
 package ru.mts.catalogfilm.dto;
 
 import lombok.Data;
-import ru.mts.catalogfilm.entity.FilmEntity;
 
 import java.util.List;
 import java.util.UUID;
@@ -12,5 +11,5 @@ public class DirectorDto {
     private String name;
     private Integer age;
     private String country;
-    private List<FilmEntity> filmList;
+    private List<FilmDto> filmList;
 }
